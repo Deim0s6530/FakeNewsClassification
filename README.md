@@ -2,6 +2,13 @@
 
 This project focuses on the classification of fake news using advanced Natural Language Processing (NLP) techniques and machine learning and deep learning models. It covers the entire classification pipeline, from data exploration to deploying Transformer-based models.
 
+## Dataset
+The dataset used in this project is the **WELFake Dataset**. You can download it from Kaggle using the following link:
+
+[Download WELFake Dataset from Kaggle](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification/data)
+
+Please ensure the dataset is placed in the appropriate directory (`data/` or as specified in the code) before running the scripts.
+
 ## Project Content
 
 ### 1. Data Exploration and Preprocessing

@@ -31,7 +31,3 @@ Pandas, NumPy, Matplotlib, Seaborn for data analysis and visualization.
 Scikit-learn for classical models and TF-IDF vectorization.
 PyTorch, Hugging Face Transformers for advanced models and Transformer handling.
 BERT for text classification.<br>
-Objectives
-Automatically identify fake news with high accuracy.
-Compare performance between classical and Transformer-based models.
-Provide a complete and reproducible pipeline for fake news classification

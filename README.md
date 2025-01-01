@@ -1,53 +1,63 @@
-# Fake News Classification
+# Fake News Classification with Transformers
 
-This project focuses on the classification of fake news using advanced Natural Language Processing (NLP) techniques and machine learning and deep learning models. It covers the entire classification pipeline, from data exploration to deploying Transformer-based models.
+This project focuses on the classification of fake news using advanced Transformer-based models. The implementation leverages **BERT** and custom Transformer architectures to classify textual data as fake or real.
 
 ## Dataset
-The dataset used in this project is the **WELFake Dataset**. You can download it from Kaggle using the following link:
+The dataset used in this project is the **WELFake Dataset**. Due to size constraints, the dataset is not included in the repository. You can download it from Kaggle:
 
-[Download WELFake Dataset from Kaggle](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification/data)
+[Download WELFake Dataset from Kaggle](https://www.kaggle.com/datasets/marcodelarosa/welfake-dataset)
 
-Please ensure the dataset is placed in the appropriate directory (`data/` or as specified in the code) before running the scripts.
+Please ensure the dataset is placed in the appropriate directory (`data/`) before running the scripts.
 
 ## Project Content
 
 ### 1. Data Exploration and Preprocessing
-- Loading and cleaning data from the `WELFake_Dataset.csv` dataset.
-- Handling missing values and removing unnecessary columns.
+- Cleaning and preparing the dataset by removing unnecessary columns and handling missing values.
 - Merging the `title` and `text` columns for unified analysis.
-- Adding new metrics, such as the lengths of texts, titles, and article bodies.
+- Adding new metrics such as the lengths of texts, titles, and article bodies.
 
-### 2. Exploratory Data Analysis (EDA)
-- Analyzing distributions of fake and real news data.
-- Visualizing relationships between text/title lengths and labels.
-- Analyzing correlations between numerical variables.
+### 2. Preparing Data for Transformers
+- Tokenizing textual data using **BERT Tokenizer**.
+- Managing sequence lengths with padding and truncation.
+- Creating attention masks for effective Transformer input processing.
 
 ### 3. Modeling
-#### Text Vectorization:
-- Implementing TF-IDF to transform textual data into numerical vectors.
-- Using advanced techniques such as stemming to enhance data quality.
+#### Pretrained Transformer Model (BERT):
+- Fine-tuning **BERT** for binary classification (fake vs real news).
+- Implementing BERT tokenization and encoding pipeline.
+- Using PyTorch for training and validation.
 
-#### Training Classical Models:
-- Naive Bayes for establishing a baseline.
-
-#### Advanced Transformer-Based Models:
-- Utilizing **BERT** for text classification.
-- Preparing data for BERT with steps like tokenization and sequence length management.
-- Implementing a custom Transformer model.
+#### Custom Transformer Model:
+- Building a custom Transformer model for sequence classification.
+- Defining hyperparameters such as `vocab_size`, `d_model`, `nhead`, and `num_encoder_layers`.
 
 ### 4. Training and Validation
-- Splitting data into training and testing sets.
-- Training models with **PyTorch** and validating them on separate datasets.
-- Using optimizers like **AdamW** and learning rate schedulers.
+- Splitting data into training, validation, and testing sets.
+- Utilizing optimizers like **AdamW** and learning rate schedulers for effective training.
+- Implementing loss functions like **CrossEntropyLoss**.
+- Training on GPU for faster computation.
+
+### 5. Evaluation
+- Validating models on separate datasets.
+- Comparing the performance of BERT and custom Transformer models.
 
 ## Technologies Used
 - **Python**
-- **Pandas**, **NumPy**, **Matplotlib**, **Seaborn** for data analysis and visualization.
-- **Scikit-learn** for classical models and TF-IDF vectorization.
-- **PyTorch**, **Hugging Face Transformers** for advanced models and Transformer handling.
-- **BERT** for text classification.
+- **Pandas**, **NumPy** for data preprocessing and manipulation.
+- **Matplotlib**, **Seaborn** for data visualization.
+- **PyTorch**, **Hugging Face Transformers** for model implementation and fine-tuning.
+- **BERT** for pretrained Transformer-based text classification.
 
 ## Objectives
-- Automatically identify fake news with high accuracy.
-- Compare performance between classical and Transformer-based models.
-- Provide a complete and reproducible pipeline for fake news classification.
+- Develop a high-performing fake news detection model using Transformer-based techniques.
+- Compare the performance of pretrained BERT and custom Transformer architectures.
+- Provide a reproducible pipeline for fake news classification.
+
+---
+
+### Instructions
+1. Clone the repository.
+2. Download the dataset from Kaggle and place it in the `data/` folder.
+3. Install required dependencies using:
+   ```bash
+   pip install -r requirements.txt

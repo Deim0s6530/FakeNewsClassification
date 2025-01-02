@@ -17,11 +17,6 @@ This project focuses on detecting fake news using a variety of Machine Learning 
   - Convolutional Neural Networks (CNNs)
   - Bidirectional Encoder Representations from Transformers (BERT)
 
-### `Transformers.ipynb`
-- **TFIDF**: Revisiting feature extraction.
-- **Preparing the Data**: Preprocessing steps to clean and organize the dataset.
-- **Transformers**: Utilizing modern Transformer-based models for fake news detection.
-
 ## Dataset
 The project uses the [Fake News Classification Dataset](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification/data) available on Kaggle. It analyzes the linguistic patterns in fake and real news, noting, for instance, that fake news articles generally have a higher word count compared to real news.
 
